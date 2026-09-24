@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive history website: Japan's emergence as a world power and its impact on international relations." />
+  <title>Japan Rising — From Isolation to World Power</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="progress"></div>
+  <div class="grain"></div>
+  <audio id="bgAudio" src="wano-theme.mp3" loop preload="none"></audio>
+
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Japan Rising home">
+      <span class="brand-mark">日</span>
+      <span>JAPAN <b>RISING</b></span>
+    </a>
+    <nav>
+      <a href="#story">Story</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#transformation">Transformation</a>
+      <a href="#impact">Impact</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+    <button class="nav-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">1868 — 1905 • A turning point in world history</p>
+        <h1>From <span>isolation</span><br>to world power.</h1>
+        <p class="hero-lede">
+          Explore how Japan transformed itself after the Meiji Restoration —
+          and how that transformation reshaped international relations across Asia.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#story">Begin the journey <span>↓</span></a>
+          <button class="button ghost" id="soundBtn">Sound: Off</button>
+        </div>
+      </div>
+      <div class="hero-kanji" aria-hidden="true">日本</div>
+      <div class="scroll-cue"><span></span> Scroll to explore</div>
+    </section>
+
+    <section id="story" class="section intro">
+      <div class="section-label">01 / The starting point</div>
+      <div class="two-col">
+        <div class="reveal">
+          <p class="eyebrow">Before the transformation</p>
+          <h2>A country under pressure.</h2>
+        </div>
+        <div class="story-text reveal">
+          <p>Before the <strong>Meiji Restoration of 1868</strong>, Japan was ruled for around 250 years by the Tokugawa shogunate. The emperor existed, but political authority belonged to the shogun.</p>
+          <p>Foreign contact and trade were heavily restricted under a policy often described as <strong>sakoku</strong>. Society was hierarchical, the economy was largely agricultural, and Japan lacked the industrial and military technology of European powers.</p>
+          <div class="quote-card">
+            <span>“</span>
+            <p>If it remained weak and isolated, it could potentially become another victim of Western imperialism.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hierarchy reveal">
+        <div class="hierarchy-title">Tokugawa social hierarchy</div>
+        <div class="hierarchy-row">
+          <div class="rank r1">Emperor</div><div class="arrow">→</div>
+          <div class="rank r2">Shogun</div><div class="arrow">→</div>
+          <div class="rank r3">Daimyo</div><div class="arrow">→</div>
+          <div class="rank r4">Samurai</div><div class="arrow">→</div>
+          <div class="rank r5">Farmers</div><div class="arrow">→</div>
+          <div class="rank r6">Artisans</div><div class="arrow">→</div>
+          <div class="rank r7">Merchants</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pressure">
+      <div class="pressure-panel reveal">
+        <div>
+          <p class="eyebrow">1853</p>
+          <h2>Then came Perry.</h2>
+          <p>American Commodore <strong>Matthew Perry</strong> arrived with modern warships and demanded that Japan open its ports. The encounter exposed Japan's vulnerability.</p>
+        </div>
+        <div class="ship-scene" aria-hidden="true">
+          <div class="moon"></div>
+          <div class="wave wave-a"></div><div class="wave wave-b"></div>
+          <div class="ship"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section meiji">
+      <div class="section-label">02 / The turning point</div>
+      <div class="meiji-grid">
+        <div class="reveal">
+          <p class="eyebrow">1868</p>
+          <h2>The Meiji<br><span>Restoration.</span></h2>
+          <figure class="photo-frame portrait">
+            <img src="Meiji.jpg" alt="Portrait of Emperor Meiji in ornate military dress uniform" loading="lazy" />
+            <figcaption>Emperor Meiji — the figure at the center of Japan's modernization.</figcaption>
+          </figure>
+        </div>
+        <div class="meiji-card reveal">
+          <div class="seal">明治</div>
+          <h3>Fukoku kyōhei</h3>
+          <p>“Rich country, strong army.”</p>
+          <div class="card-line"></div>
+          <p class="small">The new government aimed to create a modern, centralized, industrialized and militarily powerful state strong enough to resist Western domination.</p>
+        </div>
+      </div>
+
+      <div class="photo-gallery">
+        <figure class="photo-frame reveal">
+          <img src="End_of_shogunate.jpg" alt="Japanese woodblock print of a formal court ceremony with officials in Western-style dress" loading="lazy" />
+          <figcaption>A new political order: a formal court ceremony of the Meiji state.</figcaption>
+        </figure>
+        <figure class="photo-frame reveal">
+          <img src="Satsuma_rebellion.jpg" alt="Engraving of Satsuma samurai in traditional armor gathered around their commander" loading="lazy" />
+          <figcaption>The Satsuma Rebellion (1877): samurai forces resist the new modern state.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="charter-oath" class="section charter-oath">
+      <div class="section-label">The founding oath</div>
+      <div class="section-head reveal">
+        <p class="eyebrow">April 6, 1868</p>
+        <h2>The Charter Oath.<br><span>Five articles, one direction.</span></h2>
+        <p class="story-text">Weeks after the Restoration, the new government issued the <strong>Charter Oath (五箇条の御誓文)</strong> in the emperor's name. Drafted by reform-minded officials and recited by the 16-year-old Emperor Meiji before the court in Kyoto, it was less a law than a statement of intent — reassuring nobles and samurai that the new regime had a plan, while leaving its promises vague enough for both traditionalists and reformers to embrace.</p>
+      </div>
+      <div class="cards">
+        <article class="info-card reveal">
+          <div class="icon">議</div><span class="card-number">01</span>
+          <h3>Public discussion</h3>
+          <p>Deliberative assemblies would decide matters through open discussion, a phrase later cited to justify the Diet and constitutional government.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">合</div><span class="card-number">02</span>
+          <h3>Unity across classes</h3>
+          <p>High and low alike were called to carry out the business of state together, rather than leaving rule to a narrow warrior elite.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">民</div><span class="card-number">03</span>
+          <h3>Room to advance</h3>
+          <p>Common people, officials and soldiers alike should be free to pursue their ambitions, hinting at an end to rigid Tokugawa class barriers.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">破</div><span class="card-number">04</span>
+          <h3>Breaking old customs</h3>
+          <p>"Evil customs of the past" were to be discarded in favor of natural justice — read as license to dismantle feudal and isolationist practice.</p>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">知</div><span class="card-number">05</span>
+          <h3>Knowledge from the world</h3>
+          <p>The most consequential article: knowledge would be sought globally to strengthen imperial rule, authorizing the entire Westernization drive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="transformation" class="section transformation">
+      <div class="section-label">03 / The engine of change</div>
+      <div class="section-head reveal">
+        <p class="eyebrow">Why did Japan industrialize so rapidly?</p>
+        <h2>One transformation.<br><span>Many moving parts.</span></h2>
+      </div>
+      <div class="cards">
+        <article class="info-card reveal">
+          <div class="icon">⚙</div><span class="card-number">01</span>
+          <h3>State-led industry</h3>
+          <p>The government invested in factories, railways, shipyards, mines, telegraphs, banking, education and transportation.</p>
+          <div class="mini-chain">Factories → Weapons → Ships</div>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">◎</div><span class="card-number">02</span>
+          <h3>Borrowed institutions</h3>
+          <p>Japan studied different Western powers and adopted useful technology, military organization, administration and industrial practices.</p>
+          <div class="mini-chain">Study → Adapt → Compete</div>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">文</div><span class="card-number">03</span>
+          <h3>Modern education</h3>
+          <p>A national education system expanded literacy, scientific knowledge, technical skills and administrative capacity.</p>
+          <div class="mini-chain">Education → Workforce → Growth</div>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">⚔</div><span class="card-number">04</span>
+          <h3>Military modernization</h3>
+          <p>Japan created a modern conscript army, military academies, artillery, rifles, factories, railways and a powerful navy.</p>
+          <div class="mini-chain">Army + Navy → Power</div>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">◈</div><span class="card-number">05</span>
+          <h3>Zaibatsu</h3>
+          <p>Industries established by the government were sometimes sold to private entrepreneurs, helping powerful business groups develop.</p>
+          <div class="mini-chain">Capital → Industry → Influence</div>
+        </article>
+        <article class="info-card reveal">
+          <div class="icon">地</div><span class="card-number">06</span>
+          <h3>Resources & markets</h3>
+          <p>Limited supplies of coal, iron, oil and other raw materials encouraged Japan to look beyond its borders.</p>
+          <div class="mini-chain">Demand → Expansion → Empire</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compare">
+      <div class="section-label">04 / Learning from the West</div>
+      <div class="compare-wrap reveal">
+        <div class="compare-intro">
+          <p class="eyebrow">Japan did not copy one country.</p>
+          <h2>It studied the world.</h2>
+          <p>Japanese officials and students travelled overseas to examine systems they considered useful.</p>
+        </div>
+        <div class="country-list">
+          <button class="country active" data-country="germany"><span>🇩🇪</span><b>Germany</b><small>Military + legal/political elements</small></button>
+          <button class="country" data-country="britain"><span>🇬🇧</span><b>Britain</b><small>Navy + industrial/financial practices</small></button>
+          <button class="country" data-country="france"><span>🇫🇷</span><b>France</b><small>Administration + military organization</small></button>
+          <button class="country" data-country="usa"><span>🇺🇸</span><b>United States</b><small>Education + industrial techniques</small></button>
+        </div>
+        <div class="country-detail" id="countryDetail">
+          <div class="detail-orbit"></div>
+          <span class="detail-flag">🇩🇪</span>
+          <h3>Germany</h3>
+          <p>Japan drew on German models for military organization and elements of its legal and political system.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section timeline-section">
+      <div class="section-label">05 / The rise</div>
+      <div class="section-head reveal">
+        <p class="eyebrow">Tap a milestone</p>
+        <h2>The road to <span>great-power status.</span></h2>
+      </div>
+      <div class="timeline" id="timelineList">
+        <div class="timeline-line"></div>
+        <button class="event active reveal" data-year="1853">
+          <span class="dot"></span><span class="year">1853</span><span class="event-title">Perry arrives</span>
+          <span class="event-desc">Modern American warships expose Japan's vulnerability and pressure it to open its ports.</span>
+        </button>
+        <button class="event reveal" data-year="1868">
+          <span class="dot"></span><span class="year">1868</span><span class="event-title">Meiji Restoration</span>
+          <span class="event-desc">The shogunate is overthrown and a centralized modernization project begins.</span>
+        </button>
+        <button class="event reveal" data-year="1894">
+          <span class="dot"></span><span class="year">1894–95</span><span class="event-title">China defeated</span>
+          <span class="event-desc">Japan wins the First Sino-Japanese War and gains Taiwan and greater influence in Korea.</span>
+        </button>
+        <button class="event reveal" data-year="1902">
+          <span class="dot"></span><span class="year">1902</span><span class="event-title">Alliance with Britain</span>
+          <span class="event-desc">The Anglo-Japanese Alliance gives Japan diplomatic legitimacy and security.</span>
+        </button>
+        <button class="event reveal" data-year="1905">
+          <span class="dot"></span><span class="year">1904–05</span><span class="event-title">Russia defeated</span>
+          <span class="event-desc">Japan defeats the Russian Empire; the Battle of Tsushima becomes a defining victory.</span>
+        </button>
+        <button class="event reveal" data-year="1910">
+          <span class="dot"></span><span class="year">1910</span><span class="event-title">Korea annexed</span>
+          <span class="event-desc">Japan formally annexes Korea, showing the shift from resisting imperialism to practicing it.</span>
+        </button>
+      </div>
+      <div class="timeline-detail" id="timelineDetail">
+        <span class="big-year">1853</span>
+        <div><span class="eyebrow">THE FIRST SHOCK</span><h3>Perry arrives in Japan.</h3><p>Japan realized that remaining weak and isolated could leave it vulnerable to Western imperialism.</p></div>
+      </div>
+    </section>
+
+    <section class="section war">
+      <div class="war-grid">
+        <div class="war-copy reveal">
+          <p class="eyebrow">1904 — 1905</p>
+          <h2>Japan vs.<br><span>Russia.</span></h2>
+          <p>Japan fought the Russian Empire over competing interests in Manchuria and Korea — and unexpectedly won.</p>
+          <div class="stat-row">
+            <div><strong>1905</strong><small>Battle of Tsushima</small></div>
+            <div><strong>1st</strong><small>Modern Asian power to defeat a major European imperial power</small></div>
+          </div>
+        </div>
+        <div class="tsushima reveal">
+          <div class="fleet fleet-japan">🇯🇵</div>
+          <div class="fleet fleet-russia">🇷🇺</div>
+          <div class="battle-wave"></div>
+          <div class="battle-label">TSUSHIMA<br><small>1905</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section impact">
+      <div class="section-label">06 / International relations</div>
+      <div class="section-head reveal">
+        <p class="eyebrow">The world changed with Japan.</p>
+        <h2>From regional rise<br>to <span>global consequences.</span></h2>
+      </div>
+      <div class="impact-grid">
+        <article class="impact-card reveal"><span>01</span><h3>European dominance challenged</h3><p>Japan's victory over Russia showed that Asian modernization could successfully challenge European imperial power.</p></article>
+        <article class="impact-card reveal"><span>02</span><h3>A new imperial power</h3><p>Japan shifted from a potential victim of imperialism to an imperial state, expanding into Taiwan, Korea, China and Manchuria.</p></article>
+        <article class="impact-card reveal"><span>03</span><h3>China's regional dominance weakened</h3><p>Japan's victory over Qing China changed the balance of power in East Asia and encouraged foreign competition for influence in China.</p></article>
+        <article class="impact-card reveal"><span>04</span><h3>Russia pushed back</h3><p>Russia lost influence in Korea and southern Manchuria, while Japan emerged as its major rival in East Asia.</p></article>
+        <article class="impact-card reveal"><span>05</span><h3>Britain gained an ally</h3><p>The Anglo-Japanese Alliance integrated Japan into the great-power diplomatic system and reduced its isolation.</p></article>
+        <article class="impact-card reveal"><span>06</span><h3>Anti-colonial inspiration</h3><p>Japan's victory inspired some Asian nationalists by demonstrating that an Asian state could defeat a European imperial power.</p></article>
+        <article class="impact-card reveal"><span>07</span><h3>Pacific tensions grew</h3><p>Japan's expansion increased competition with the United States, contributing to later conflict in the Pacific.</p></article>
+        <article class="impact-card reveal"><span>08</span><h3>Militarism strengthened</h3><p>Military success and expansion encouraged nationalism, imperialism and a belief that territorial control could protect national interests.</p></article>
+      </div>
+    </section>
+
+    <section class="section transformation-final">
+      <div class="section-label">07 / The big picture</div>
+      <div class="transformation-track">
+        <div class="transform-node reveal"><span>01</span><b>Isolation</b><small>Before 1868</small></div>
+        <i>→</i>
+        <div class="transform-node reveal"><span>02</span><b>Pressure</b><small>Western powers</small></div>
+        <i>→</i>
+        <div class="transform-node reveal"><span>03</span><b>Modernization</b><small>Meiji reforms</small></div>
+        <i>→</i>
+        <div class="transform-node reveal"><span>04</span><b>Industry</b><small>Economic growth</small></div>
+        <i>→</i>
+        <div class="transform-node reveal"><span>05</span><b>Military</b><small>Army + navy</small></div>
+        <i>→</i>
+        <div class="transform-node reveal"><span>06</span><b>Expansion</b><small>Imperialism</small></div>
+        <i>→</i>
+        <div class="transform-node final reveal"><span>07</span><b>World Power</b><small>After 1905</small></div>
+      </div>
+    </section>
+
+    <section class="section argument">
+      <div class="argument-card reveal">
+        <div class="argument-mark">“</div>
+        <p class="eyebrow">The most important argument</p>
+        <h2>Japan did not simply become powerful — it <span>changed its position</span> in the international system.</h2>
+        <p>It transformed from a country trying to escape Western imperialism into an imperial power competing with Western states for territory, resources and influence.</p>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz-section">
+      <div class="section-label">08 / Test yourself</div>
+      <div class="quiz-card reveal">
+        <div class="quiz-top"><span>QUICK QUIZ</span><span id="quizCounter">1 / 6</span></div>
+        <h2 id="question">What was the main objective behind “Fukoku kyōhei”?</h2>
+        <div class="answers" id="answers"></div>
+        <div class="quiz-feedback" id="feedback"></div>
+        <button class="button primary next-btn" id="nextBtn" disabled>Next question →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand-mark">日</span> <strong>JAPAN RISING</strong></div>
+    <p>Interactive history experience • Built as a static GitHub-ready project</p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
